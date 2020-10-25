@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        // script请求回来的内容都会被当做js处理
+        function fn(){
+           console.log("我是实现准备好的函数");
+        }
+        
+        // 事先准备好一个函数
+        function fnsb(){
+           console.log("我是实现准备好的函数++++");
+        }
+
+    </script>
+    <script src="http://localhost:4399/all?callback=fnsb">
+        //浏览器页面上发送ajax请求地址与当前地址不同源则为跨域问题
+        // script的src 还有img的src 以及link的src请求都没有跨域问题
+    
+    </script>
+        
+</body>
+</html>

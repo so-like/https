@@ -5,6 +5,8 @@ const app = express();
 
 app.use((req,res,next) =>{
     console.log("login1");
+    // 可以在中间件中写一些对req和res对象的操作
+    req.requestTime = Date.now();
     next()
 });
 
@@ -21,6 +23,7 @@ app.use((req,res,next) =>{
 
 app.get("/",(req,res)=>{
     res.send("我是next啊");
+    console.log(req.requestTime);
 })
 
 app.listen(4399,()=>{
