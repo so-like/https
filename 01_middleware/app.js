@@ -7,7 +7,8 @@ app.get("/all",(req,res)=>{
     // console.log(req.query.callback);
     // 返回一个调用
     // console.log(req.query.callback);//这里就能拿到前端准备好的函数
-    res.send(`${req.query.callback}();`)
+    // 这样就不会写死而是一个动态的框号里的返回给前台会被当做js代码处理
+    res.send(`${req.query.callback}({'name':"波波",'age':18});`)
 })
 
 app.listen(4399,()=>{

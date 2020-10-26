@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点我获取后台数据</button>
+    <script>
+        // 事先准备好一个函数，用于接收到后台响应的带参函数来处理
+        function cl(backdata){
+            console.log(backdata);
+        }
+        window.onload = function(){
+            var btn = document.getElementById("btn");
+            btn.onclick = function(){
+                var script1 = document.createElement("script");
+                script1.setAttribute("src","http://localhost:4399/app?callback=cl");
+                document.body.appendChild(script1);
+            }
+        }
+    </script>
+   
+ <!-- <script src="http://localhost:4399/app?callback=cl"></script> -->
+</body>
+</html>
