@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 排序后判断是否重复
+        var arr = [1,2,3,3,3,3,5,5];
+        // // var arr1 = new Set(arr);
+        // // console.log(arr1);
+
+        // var arrNew = [];
+        // arr.sort((a,b)=>{
+        //     // a-b为从小到大，b-a为从到到小排序
+        //     return b-a;
+        // })
+        // arr.forEach((v,i)=>{
+        //     // 如果v和v的下一个元素不重合，则将v加入到新数组中
+        //     if(v != arr[i+1]){
+        //         arrNew.push(v)
+        //     }
+        // })
+        // console.log(arrNew);
+        // -----------------------------------------------------------------
+        // 2.使用对象方法去重
+        // 原理是对象的属性不能重名
+        var obj = {};
+        //取值：对象中的属性如果有就取值，如果没有就是undefined 
+        // 赋值：属性名存在就修改原来的值若不存在就动态添加属性名
+        var arrNew2 = [];//
+        arr.forEach(v=>{
+            if(obj[v] == undefined){
+
+                arrNew2.push(v);
+                obj[v] = 1;//把当前元素作为obj的属性对象存进obj里
+            }
+        });
+        console.log(arrNew2);
+
+    </script>
+</body>
+</html>

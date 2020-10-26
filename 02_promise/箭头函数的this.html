@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 箭头函数的this是吧箭头函数的上下文中的this用_this保存了 -->
+    <!-- 不是所有匿名函数都需要用箭头函数去替代 -->
+    <!-- 不要用new关键字去调用箭头函数 -->
 </head>
 <body>
     <!-- <script>
@@ -18,7 +21,7 @@
                 }
         obj.sayHi();
     </script> -->
-    <script>
+    <!-- <script>
         var obj ={
             name:"笑了", 
             sayName:function(){
@@ -30,6 +33,16 @@
             }
         }
         obj.sayName();
+    </script> -->
+
+    <script>
+        var fn  = (name,age)=>{
+            this.name = name;
+            this.age =age;
+        }
+        var obj = new fn("猪八戒",18);//报错fn is not a constructor
+        // fn不是一个构造器，因为this是new出来的对象的，而箭头函数是有上下文环境决定的所以报错
+
     </script>
 </body>
 </html>

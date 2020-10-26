@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = ["123",[1,2,3],obj={name:"小狗"}];
+        // var arr1 = [[1,2,3],[4,5,6],[7,8,9]];
+        // // 一个数组中还含有数组的叫做二维数组
+        // // console.log(arr);
+        // // 使用扩展运算符
+        // var arrNew = [];
+        // arr1.forEach(v=>{
+        //     arrNew.push(...v);
+        // });
+        // console.log(arrNew);
+        // -------------------------------------------------------------------
+        var arr2 = [1,2,3,[5,6,7,8],9];
+        var arr3 = [];
+        arr2.forEach(v=>{
+            if(Array.isArray(v)){
+                arr3.push(...v);
+            }else{
+                arr3.push(v);
+            }
+        })
+        console.log(arr3);
+
+    </script>
+</body>
+</html>
