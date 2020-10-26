@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击我获取笑话</button>
+    <script>
+        // 入口函数 页面加载完成后执行
+       window.onload = function(){
+           var btn = document.getElementById("btn");
+           btn.onclick = function(){
+               $.ajax({
+                   url:"http://localhost:4399/all?username=狮子狗",
+                   type:"get",
+                //    success:function(backdate){
+                //        console.log(backdate);
+                //    }
+                // ajax的返回值也是一个promise对象
+                        // vue阶段中的axios也是一个promise对象
+               }).then((backdate)=>{
+                   console.log(backdate);
+               })
+           }
+
+       }
+    </script>
+    <script src="./jquery.min.js"></script>
+</body>
+</html>
