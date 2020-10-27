@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,span{
+            color: blue;
+        }
+        /* 表示div下的span标签 */
+        div span{
+            color: green;
+        }
+        /* 表示div中的p元素下的span元素 */
+        /* div > p > span{
+            color: tomato;
+        } */
+
+        /* 表示p元素的下一个兄弟元素span */
+        p+span{
+            color: red;
+        }
+        /* p元素后边的所有兄弟元素 */
+        p ~ span{
+            color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <span>我是div中的span</span>
+        </p>
+        
+    </div>
+    <span>我是外边的span</span>
+</body>
+</html>
