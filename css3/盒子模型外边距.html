@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+
+            border: 20px solid orange;
+            /* padding: 10px; */
+
+            /* 可以这样写也可以分分开写 */
+            /* margin是相对于盒子在父容器中的位置而言的上左是改变自己的位置，而下右是改变别人的位置 */
+            margin: 20px 50px 50px 100px;
+            /* 如果margin的值为负值就向自己（top）移动如果为正值则向相反的方向移动 */
+            /* margin-top:-100px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

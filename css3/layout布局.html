@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 800px;
+            height: 200px;
+            border: orange 20px solid;
+        }
+        #inner{
+            width: 200px;
+            height: 200px;
+            background-color: palegreen;
+
+            /* auto为自动的意思，则会水平居中 */
+            /* margin-left: 300px; */
+            /* margin-right: 500px; */
+            margin:0 auto;
+        }
+        子元素的：
+/*         
+        margin-left
+        border-left
+        padding-left
+        width
+        padding-right
+        border-right
+        margin-right */
+        /* 这几个元素加起来的值要必须等于父元素的width，如果不够父元素的内容区宽度浏览器则会
+        自动将剩余的添加到margin-right上 */
+
+        /* 这几个值中有三个值可以设置为auto  浏览器会自动补全*/
+        /* width */
+        /* margin-left */
+        /* margin-right */
+        /* 假若三个值都是auto则width值被设置为最大 */
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="inner"></div>
+    </div>
+</body>
+</html>

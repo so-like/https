@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            /* content内容区域 */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+
+
+            /* border边框 */
+            /* 边框除了这个还有border-top-width //left right bottom; */
+            /* 遵循上右下左法则 如果有3组数据那么就是上左右下 两个值就是上下左右 一个值的话就是通用*/
+            border-width: 10px 20px 30px 40px;
+            /* 只有上面是20像素，其他地方采取默认 单独指定某一个边框*/
+            /* border-top-width: 20px; */
+
+            /* 边框样式有四种可以采用 */
+
+            border-style: solid;
+            /* border-style:hidden; */
+            /* hidden为隐藏 */
+            /* dotted为圆形 */
+            /* double为双实线*/
+            
+
+
+            /* 如果不设置颜色则默认采取黑色，或者自己默认设置得颜色 */
+            border-color: royalblue purple yellow green;
+
+            /* border: 20px orange solid; */
+            /* 也可以通过border给每一个边框都设置颜色属性和大小 */
+            border-top: orange double 15px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
