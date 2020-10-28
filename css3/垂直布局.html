@@ -5,19 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 父元素高度不写就会被子元素撑开 */
+        /* 如果写上那就是自己写的 */
         #box1{
+            height: 300px;
             background-color: palegreen;
+            /* auto为浏览器自动填充，如果子元素的长度超出了父元素的内容长度那么父元素的内容长度就会自动调整 */
+            /* overflow: auto; */
+            /* 根据需要设置滚动条 */
+
+            /* overflow: hidden; */
+
+            /* overflow: scroll; */
+            
+
+            /* overflow的集中属性 */
+            /* visible如果子元素内容超出后就会在父元素外边显示 */
+            /* hidden为一剪梅将超出部分隐藏 */
+            /* scroll溢出部分设置滚动条 */
+
+            /* overflowx和overflowy分别为设置水平和数值方向上 */
         }
         #inner{
             /* 父元素的高度会被其子元素撑开 */
+            
+            width: 200px;
             height: 200px;
             background-color: palevioletred;
+            border-bottom: 100px solid orange;
+        }
+        /* 子元素惠子父元素的内容中排列假如子元素的height超过了父元素的height那么就会·溢出 */
+        /* 为了处理溢出就给父元素设置了overflow属性 */
+        #inner1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
         }
     </style>
 </head>
 <body>
     <div id="box1">
         <div id="inner"></div>
+        <div id="inner1"></div>
     </div>
 </body>
 </html>
