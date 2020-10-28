@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            background-color: yellow;
+            padding: 100px;
+            border: tomato solid 20px;
+            width: 200px;
+            height: 100px;
+            /* 行内元素不用设置宽和高，因为没用 */
+            /* 行内元素不会影响整体的布局  也不会将下面的容器挤下去*/
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <span class="d1">我是span标签里的内容啊</span>
+    <div id="box"></div>
+</body>
+</html>

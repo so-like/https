@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-bottom: 100px;
+        }
+        /* 兄弟元素之间外边距问题选最大的 */
+        /* 一正一负则相互抵消 */
+        /* 如果两个都是负值则取绝对值较大的  兄弟元素之间的外边距重叠对于开发是有利的不用处理*/
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            margin-top: 50px;
+        }
+/* ******************************************************************************************* */
+        #box3{
+            width: 200px;
+            height: 100px;
+            background-color: peru;
+            padding-top: 100px;
+        }
+        /* 父子之间给子元素设置外边距也会默认传给父元素 因此我们要处理父子之间的这种传递 */
+        #box4{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            /* margin-top: 100px; */
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box1"></div>
+    <div id="box2"></div> -->
+
+    <div id="box3">
+        <div id="box4"></div>
+    </div>
+</body>
+</html>
