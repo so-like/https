@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 伪类元素  */
+        /* :first-child第一个子元素 */
+        /* :last-child最后一个子元素 */
+        /* :nth-child()第n个子元素 */
+
+        /* ul :first-child{
+            color: red;
+        } */
+
+
+        /* 直接写n为全选 n代表正无穷 */
+        /* 2n+1代表奇数位元素或者odd */
+        /* 2n代表偶数或者even */
+        ul li:nth-last-of-type(odd){
+            color: aquamarine;
+        }
+
+        /* :first-of-type 代表同类型的元素中的第一个，不考虑其他元素 */
+        /* :last-of-type 和上述类似 */
+        /* :nth-last-of-type() */
+
+
+        ul > li:not(:nth-of-type(3)){
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- ul>li*5表示冲包含5个li -->
+    <ul>
+        <span>********</span>
+        <li>0001</li>
+        <li>00002</li>
+        <li>00003</li>
+        <li>000004</li>
+        <li>00005</li>
+    </ul>
 </body>
 </html>

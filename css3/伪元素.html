@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 将第一个字母看做一个元素再给它设置属性 */
+        /* p::first-letter{
+            font-size: 30px;
+        } */
+        
+        /* 为第一行设置属性 */
+        /* p::first-line{
+            color: red;
+        } */
+
+        /* 选中变色 */
+        /* p::selection{
+            color: greenyellow;
+        } */
+        
+        /* 某个元素前一个元素 */
+        /* before和after、必须借助content才能发挥作用 */
+        div::before{
+            content:'gggg';
+        }
+        
+        /* 某个元素的后一个位置 */
+        div::after{
+            content: "666";
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 伪类相当于表示某些不是真实存在的位置 -->
+    
+
+    <div>煞笔</div>
+    <p>
+        今天是个大风天演系。]  。2005年，拍摄古装剧《锦衣卫》。2007年，主演赵宝刚导演的青春]  同年，主演首
+    </p>
+</body>
+</html>

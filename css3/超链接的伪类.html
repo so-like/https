@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :link表示正常的连接 */
+        a:link{
+            color: blue;
+        }
+
+        /* :visited表示已经访问过得连接 */
+        /* visited由于隐私原因只能修改颜色 */
+        a:visited{
+            color: red;
+            /* 字体大小不起作用 */
+            font-size: 50px;
+        }
+        
+        /* 鼠标悬停时 */
+        a:hover{
+            color: sandybrown;
+        }
+        
+        /* 鼠标点击 */
+        a:active{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">访问过的超链接</a>
+    <a href="http://www.baidu.com">未访问过的超链接</a>
+</body>
+</html>
