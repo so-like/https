@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* #box1{
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+            float: left;
+        } */
+        /* 浮动元素不会盖住我们的文字 */
+        #box2{
+            background-color: springgreen;
+            float: left;
+        }
+
+        .hl{
+            width: 200px;
+            height: 200px;
+            background-color: tan;
+            float: left;
+        }
+        /* 元素设置浮动之后就会从文档流中脱离，然而它之前的一些特性将不会支持 */
+
+        /* ---------------------------------------------------------------------- */
+        /* 脱离文档流后块元素特点 */
+        /* 块元素将不再独占一行,其高度和宽度将会默认被其内容撑开 */
+
+        /* 脱离文档流后块元素特点 */
+        /* 行内元素浮动之后就会变成块元素符合块元素的一些特点 */
+
+        /* 脱离文档流后就不会再分块元素和行内元素了 */
+
+    </style>
+</head>
+<body>
+    <div id="box1">
+        
+    </div>
+    <!-- <p>woshik侧分分分分分</p> -->
+
+    <div id="box2">hello</div>
+
+
+    <span class="hl">我是行内元素</span>
+</body>
+</html>

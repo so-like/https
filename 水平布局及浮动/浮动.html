@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #bbffaa;
+
+            /* float为浮动，可以让子元素在父元素里左右移动  相当于气球*/
+
+            /* 注意设置浮动之后 水平布局的等式就不必再成立了 */
+            /* 注意设置浮动之后元素就从文档流中脱离不会再占用父容器空间也不会再占用文档流中的位置，
+            位于文档流下方的元素就会自动向上移动*/
+            float: left;
+                /* 浮动元素会完全脱离文档流，不再占文档流中的位置 当然他不会移出父元素 */
+                /* 浮动元素不会盖住其他的浮动元素 */
+
+                /* 没有浮动的块元素就像一堵墙，对于浮动元素来说是它们永远无法逾越的鸿沟 */
+
+                /* 浮动元素不会超过它上边的兄弟元素，永远在它上一个兄弟元素之后浮动 */
+
+        }
+        #box2{
+            width: 400px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+        }
+        #box3{
+            width: 200px;
+            height: 300px;
+            background-color: sandybrown;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

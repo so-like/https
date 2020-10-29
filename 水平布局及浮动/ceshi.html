@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 设置nav大小 */
+        #nav {
+            /* 设置宽度和高度 */
+            width: 1210px;
+            height: 48px;
+            /* 设置背景颜色 */
+            background-color: #E8E7E3;
+            margin: 50px auto;
+            /* 去掉li前边的点 */
+            list-style: none;
+        }
+
+        /* 设置nav中的li */
+        #nav li {
+            float: left;
+            line-height: 48px;
+            /* background-color: #3F3F3F; */
+
+        }
+
+        /* 设置nav中li下的a元素 */
+        #nav li a{
+            /* 去掉下划线 */
+           text-decoration: none;
+           color: #808080;
+           display: block;
+           /* 设置和父容器一样高 */
+           line-height: 48px;
+           /* 设置字体大小将a元素撑开 */
+           font-size: 18px;
+           /* 将a元素隔开 */
+           padding: 0 39px;
+           
+        }
+        #nav li:last-child a{
+            /* 多出来5像素用padding来弥补或者直接改父容器的width */
+            padding: 0 38px 0 44px;
+        }
+        #nav a:hover{
+            /* 鼠标悬停后要显示的颜色 */
+            background-color: #3F3F3F;
+            color: #D7D6D2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul id="nav">
+        <li>
+            <a href="#">HTML/CSS</a>
+        </li>
+
+        <li>
+            <a href="#">Browser Side</a>
+        </li>
+
+        <li>
+            <a href="#">Server Side</a>
+        </li>
+
+        <li>
+            <a href="#">Programming</a>
+        </li>
+
+        <li>
+            <a href="#">XML</a>
+        </li>
+
+        <li>
+            <a href="#">Web Building</a>
+        </li>
+
+        <li>
+            <a href="#">Reference</a>
+        </li>
+    </ul>
+</body>
+
+</html>
