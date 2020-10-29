@@ -9,10 +9,18 @@
             background-color: yellow;
             padding: 100px;
             border: tomato solid 20px;
+            /* display: block; */
             width: 200px;
             height: 100px;
+
+            /* displaynone用来隐藏一个元素 隐藏完了就没了 */
+            display: none;
+            /* visibility: hidden也是用来隐藏一个元素 不过它隐藏元素后依然将那块区域占着*/
+            visibility: hidden;
+
             /* 行内元素不用设置宽和高，因为没用 */
             /* 行内元素不会影响整体的布局  也不会将下面的容器挤下去*/
+            /* display属性分为block inline inline-block(行内块元素)既可以设置宽高也不独占一行 */
         }
         #box{
             width: 200px;

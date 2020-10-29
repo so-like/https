@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: hotpink solid 50px;
+
+            /* box-sizing知识对width和height起作用content-box表示为width和height只对内容起作用 */
+            /* 而当box-sizing设置为border-box时它是针对盒子可见大小 */
+            /* box-sizing: content-box; */
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>
