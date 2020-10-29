@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height:200px;
+            background-color: greenyellow;
+            /* boxshdow的参数第一个为阴影width第二个为阴影height 第三个值为阴影的模糊半径正值向右下移动如果为负值向左上移动*/
+            /* 阴影也不会影响布局 */
+            box-shadow:20px 20px 50px orangered;
+            /* outline-color: grey; */
+
+            /* outline为轮廓他不会将容器下边的元素挤出去相当于行内元素一样 */
+            /* 轮廓它不会影响页面布局 */
+            
+           /* 如果设置两个值那么就是椭圆不包含相同 */
+            border-top-left-radius: 10px 20px;
+            /* 先上下后左右为盒子设置圆角*/
+            /* border-top-right-radius: ; */
+            /* border-bottom-left-radius: ; */
+            /* border-bottom-right-radius: ; */
+        }
+        #box:hover{
+            outline: solid orange 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    hello
+</body>
+</html>
