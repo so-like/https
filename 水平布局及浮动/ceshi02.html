@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #bfa;
+        }
+        #box{
+            width: 190px;
+            height: 470px;
+            background-color: #FEFEFE;
+            margin: 100px auto;
+        }
+        #box li{
+            height: 25px;
+            list-style: none;
+            line-height: 25px;
+            /* 这里用padding而不用margin是因为前边就会有一部分空出来 */
+            padding-left: 18px;
+            /* 在这里给li设置字体大小 */
+            /* 下边给a设置一个字体 */
+            /* 这样 / 就会变小 */
+            font-size: 12px;
+        }
+        #box li:hover{
+            background-color: #D9D9D9;
+        }
+        #box a{
+            text-decoration: none;
+            color: black;
+            padding: 0 3px;
+            /* 在这里给a设置字体大小 */
+            font-size: 14px;
+        }
+        #box a:hover{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <ul id="box">
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+        <li><a href="#">我是憨憨</a>/<a href="#">我是憨憨</a></li>
+    </ul>
+</body>
+</html>
