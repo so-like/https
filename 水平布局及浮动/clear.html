@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* 文字会环绕在图片周围 */
+            float: left;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            float: right;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            /* 清除box左浮动给box2的影响 */
+            /* clear原理浏览器会给box2自动加一个margin-top(上一个浮动元素的高)这样他就不会移上去 */
+            /* clear: left; box1没有左浮动之前的位置*/
+            /* clear: right; box2没有右浮动之前的位置 */
+            /* clear: right; */
+            /* 谁对它的影响最大清除谁 box1 高200px box2高400px 所以清除box2*/
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><h2>1</h2></div>
+    <div class="box2"><h2>2</h2></div>
+    <div class="box3"><h2>3</h2></div>
+</body>
+</html>

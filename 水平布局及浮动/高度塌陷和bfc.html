@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 不用给父元素设置高度 父元素的高度由子元素来撑开
+        #box{
+            width: 1400px;
+            background-color: violet;
+            margin: 0 auto;
+        }
+        .inner{
+            height: 500px;
+            width: 100%;
+
+        } */
+        
+        #box2{
+            /* 相当于给盒子一个边框，里面的内容由子元素撑开 */
+            border: violet solid 20px;
+            overflow: hidden;
+        }
+        #box2 .lo{
+            height: 300px;
+            width: 100%;
+            background-color: yellow;
+        }
+
+        /* 高度塌陷问题是不给父元素设置高度，其高度由子元素撑开，当给子元素设置浮动时，
+        子元素就脱离文档流失去块元素的特性导致父元素高度塌陷  父元素高度塌陷后旗下的子元素就会上移*/
+
+        /* BFC(Block Formatting  Content) 块级格式化环境 bfc为css中隐藏的一个属性，可以为一个元素开启bfc后
+        该元素就会变成一个独立的布局区域*/
+        /* 开启bfc的元素不会被浮动元素所覆盖 */
+        /* 开启bfc的元素子元素和父元素外边距不会重叠 */
+        /* 开启bfc的元素会包裹浮动元素 */
+
+        /* 1.通过设置浮动开启bfc  2.设置display的块级属性  3.overflow属性开启bfc*/
+    </style>
+</head>
+<body>
+    <!-- <div id="box">
+        <div class="inner"></div>
+    </div> -->
+
+    <div id="box2">
+        <div class="lo"></div>
+        <div class="box8"></div>
+    </div>
+</body>
+</html>

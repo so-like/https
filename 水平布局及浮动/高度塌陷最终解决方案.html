@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            border: burlywood solid 5px;
+            /* overflow: hidden; */
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            float: left;
+        }
+        .box3{
+            clear: left;
+        }
+        /* 给母盒子再设置一个伪类元素相当于木盒子的子元素，第一个子元素浮动之后，母元素就由伪类元素撑起 */
+        #box::after{
+            /* 设置一个空内容盒子 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box"></div>
+        <!-- 通过html为母盒子添加一个子元素由它来撑起母盒子 不推荐这种方法 -->
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+</html>
