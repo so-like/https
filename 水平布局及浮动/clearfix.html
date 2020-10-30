@@ -13,18 +13,34 @@
             width: 200px;
             height: 200px;
             background-color: coral;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
+        /* .box1::before{
+            content: "";
+            /* 解决外边距重叠问题 
+            after是来解决高度塌陷的 */
+            /* display: table; */
+        /* } */ 
         .box2{
             width: 100px;
             height: 100px;
             background-color: darkblue;
             margin-top: 100px;
         }
+
+        /* display:table既可以解决高度塌陷问题也可以解决外边距重叠问题
+        下面这句代码这两个问题都可以解决 */
+        .clearfix:before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 </head>
 <body>
-    <div class="box1">
+    <!-- 为box1再添加一个clearfix属性 -->
+    <div class="box1 clearfix" >
         <div class="box2"></div>
     </div>
 </body>
