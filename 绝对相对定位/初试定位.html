@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 30px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: darkgoldenrod;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            position: relative;
+            left: 200px;
+            top: -200px;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            
+        }
+        /* 定位有static静止 relative相对定位 absolute绝对定位  fixed固定定位 sticky粘滞定位 */
+        /* 相对定位的参照物是元素在文档流中的位置00点也就是自己的位置 */
+        /* 相对定位会提升我们元素的一个层级 就是最外层 */
+        /* 相对定位不会脱离文档流，所以不会改变元素性质如块元素还是块元素 行内还是行内 */
+        /* 相对定位相当于灵魂出窍，魂出来了，肉体还在占着位置 */
+
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>
