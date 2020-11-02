@@ -1,0 +1,44 @@
+{
+  "id": "2174859",
+  "name": "0001",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17746041",
+      "name": "帽子",
+      "font_class": "maozi",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "17746047",
+      "name": "鞋子",
+      "font_class": "xiezi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "17746048",
+      "name": "袜子",
+      "font_class": "wazi",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "17746049",
+      "name": "羽绒服",
+      "font_class": "yurongfu",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "17746050",
+      "name": "长靴",
+      "font_class": "changxue",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

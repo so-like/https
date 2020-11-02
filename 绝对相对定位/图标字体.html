@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        li::before{
+            /* 文档编码 */
+            content: "\f6d3";
+            /* 引入字体 */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            /* 设置颜色 */
+            color: springgreen;
+            /* 设置大小 */
+            font-size: 100px;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- （iconfont）通过字体来引入图片  把图标设置成字体通过@font-face的方法来引入图标-->
+    <!-- fas或者fab这两个是免费的 -->
+    <i class="fas fa-phone-volume" style="font-size:100px;color: springgreen;"></i>
+    <i class="fas fa-radiation"></i>
+
+    <ul>
+        <li>小时不识月</li>
+        <li>呼作白玉盘</li>
+        <li>江南是百八十寺</li>
+        <li>多少楼台烟雨中</li>
+    </ul>
+    <!-- 通过实体的方式引入图标 -->
+    <span class="fas">&#xf2a2</span>
+</body>
+</html>
