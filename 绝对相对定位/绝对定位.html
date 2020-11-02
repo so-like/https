@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div#box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        div#box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            /* 给box2开启绝对定位， 会脱离文档流  */
+            /* 绝对定位会改变元素的性质，块变行内行内变块 */
+            /* 绝对定位会提升元素层级 */
+            /* 绝对定位的位置是相对于包含块父元素的00位置而言的 */
+            /* 行内元素不能作为元素怒的外部包含块 */
+
+            /* 包含块就是离元素最近的开启了定位的祖先元素  所有父元素都没开启定位时就相对于根元素而言 */
+
+            /* 用来测试box2的00点 */
+            left: 0;
+            top: 0;
+        }
+        div#box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(20, 150, 78);
+        }
+        div.box{
+            width: 400px;
+            height: 400px;
+            background-color:red;
+            position: relative;
+        }
+        div.box1{
+            width: 400px;
+            height: 400px;
+            background-color:yellow;
+            /* position: relative; */
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">1</div>
+    <div class="box">
+        5
+        <div class="box1">
+            6
+            <div id="box2">2</div>
+        </div>
+    </div>
+    
+    <div id="box3">3</div>
+</body>
+</html>

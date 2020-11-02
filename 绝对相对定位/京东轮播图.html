@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css3/etc/reset.css">
+    <style>
+        .list{
+            width: 590px;
+            height: 470px;
+            margin: 50px auto;
+            /* 开启相对定位，以保证.inner定位时不会一窗口为00点 */
+            position: relative;
+        }
+        .list li{
+            position: absolute;
+        }
+        .list .inner{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+        .list .inner a{
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255,0.7);
+            /* 给所有的圆圈都加上边框 这样可以保证大小都一样 颜色改为透明这样就可以不显现出来了*/
+            border:2px solid transparent;
+            /* 对边框进行裁剪 */
+            background-clip: content-box;
+        }
+        .list .inner .pp,.list .inner :hover{
+            background-color: #fff;
+            border:2px solid rgb(255, 255, 255);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li><a href="#"><img src="./etc/02.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./etc/02.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./etc/02.jpg" alt=""></a></li>
+
+        <div class="inner">
+            <a class="pp" href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </ul>
+</body>
+</html>

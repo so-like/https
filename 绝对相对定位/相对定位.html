@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div#box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        div#box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            /* 给box2开启相对定位，是相对于原位置而言 相对定位不会脱离文档流 相对定位会提升元素的层级 */
+            top: -200px;
+            left: 200px;
+        }
+        div#box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(20, 150, 78);
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+</body>
+</html>

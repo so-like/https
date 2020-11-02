@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+        }
+        div#box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        div#box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* 固定定位 是一种特殊的绝对定位 它的初始位置是相对于视窗口 */
+            position: fixed;
+            /* 测试固定定位的00点 它是相对于窗口的00点而言 不管包含它的父元素有没有开启相对定位它的00位置总会是视窗位置*/
+            top: 0;
+            left: 0;
+           
+        }
+        div#box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(20, 150, 78);
+        }
+        div.box{
+            width: 400px;
+            height: 400px;
+            background-color:red;
+            position: relative;
+        }
+        div.box1{
+            width: 400px;
+            height: 400px;
+            background-color:yellow;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">1</div>
+    <div class="box">
+        5
+        <div class="box1">
+            6
+            <div id="box2">2</div>
+        </div>
+    </div>
+    
+    <div id="box3">3</div>
+</body>
+</html>

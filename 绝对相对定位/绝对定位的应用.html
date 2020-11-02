@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: blueviolet;
+            position: relative;
+            margin: 200px auto;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            position: absolute;
+            /* 水平居中 */
+            margin-left: auto;
+            margin-right: auto;
+
+            /* 垂直居中 */
+            margin-top: auto;
+            margin-bottom: auto;
+
+
+            /* 水平布局 margin-left+border-left+padding-left+width+padding-right+border-right+margin-right=父元素宽度; */
+            /* 当开启了绝对定位以后 就会在上面的等式的两边加一个left和right 假如这个等式不满足的话 就会将right设置为auto */
+
+            /* 当left和right值不设定时，当上面的等式不满足时；浏览器就会自动设置left和right的值 */
+
+            /* 有auto的优先设置没有auto的自动设置下边四个值 */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
