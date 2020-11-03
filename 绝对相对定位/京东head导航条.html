@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入格式化样式 -->
+    <link rel="stylesheet" href="../css3/etc/reset.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        /* 设置高度塌陷解决办法 */
+        .clearfix::before,
+        .clearfix-after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        /* 设置大盒子样式 */
+        .box{
+            line-height: 30px;
+            background-color: #E3E4E5;
+            margin-top: 30px;
+            border: 1px #DDDDDD solid;
+        }
+        .box1{
+            width: 1300px;
+            height: 30px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .city{
+            width: 60px;
+            height: 30px;
+            float: left;
+        }
+
+        /* 当鼠标移入时改变城市背景 */
+        .city:hover{
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-bottom:none
+        }
+
+        /* 设置city列表样式 */
+        .city-list{
+            width: 401px;
+            height: 585px;
+            color: white;
+            /* 将下拉框隐藏 */
+            display: none;
+            border: 1px solid #CCCCCC;
+            /* 为其设置绝对定位 让它脱离文档流 防止将父元素的高撑大 */
+            position: absolute;
+            top: 31px;
+        }
+
+        /* 当鼠标移到shanxi时将它的下一个子元素显示出来 */
+        .city:hover .city-list{
+            display: block;
+        }
+        .shanxi{
+            position: relative;
+            z-index: 1;
+        }
+        .shanxi .fas{
+            color: red;
+        }
+        .shanxi a{
+            text-decoration:none;
+            font: 12px;
+            /* font-family: '微软雅黑'; */
+            color: black;
+        }
+
+        /* 地区颜色为红色 鼠标悬停变红色 */
+        .shanxi a:hover,
+        .right a:hover,
+        .right .red{
+            color: #FF0000;
+        }
+
+        /* 让右边区域右浮动，清除li标签前边小黑点 */
+        .right{
+            float: right;
+            list-style: none;
+        }
+
+        /* 设置li中字体大小 */
+        .right li{
+            float: left;
+            /* font-family: "微软雅黑"; */
+            font-size: 12px;
+            margin: 0 5px;
+            
+        }
+
+        /* 设置的宽度 */
+        .right li .fas{
+            margin: auto 1px;
+        }
+
+        /* 给a标签去除下划线 将其分割开来*/
+        .right li a{
+            text-decoration: none;
+            margin: 0 4px;
+        }
+
+        /* 设置分割线的宽度以及颜色 */
+        .right .line{
+            width: 1px;
+            height: 10px;
+            background-color: #999;
+            margin: 10px auto;
+        }
+
+        /* 设置a标签颜色 */
+        .shanxi a,
+        .right a,
+        .right span{
+            color: #999;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <!-- 创建外部容器 -->
+    <div class="box">
+        <!-- 创建内部容器 -->
+        <div class="box1">
+
+            <!-- 左侧城市栏 -->
+            <div class="city">
+                <div class="shanxi">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">陕西</a>
+                </div>
+
+                <!-- 放置地址下拉栏 -->
+                <div class="city-list">
+
+                </div>
+            </div>
+            
+            <!-- 右侧导航栏 -->
+            <div class="right">
+                <li>
+                    <a href="javascript:;">你好 ,请登录 ,</a>
+                    <a class="red" href="javascript:;">欢迎注册</a>
+                </li>
+                
+                <li class="line"></li>
+
+                <li>
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                
+                <li class="line"></li>
+
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                 
+
+                <li class="line"></li>
+
+                <li>
+                    <a href="javascript:;">京东会员</a>
+                </li>
+                 
+
+                <li class="line"></li>
+
+                <li>
+                    <a class="red" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                
+                 
+
+                <li class="line"></li>
+
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                 
+
+
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                 
+
+                <li class="line"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

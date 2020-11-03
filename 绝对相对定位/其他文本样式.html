@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            /* 将超出界限的文本隐藏 */
+            font-size: 50px;
+            /* 文本设置格式 */
+            /* none默认样式
+            under-line下划线
+            line-through删除线
+            over-line 上划线*/
+            text-decoration: underline yellow;
+            /* text-decoration: none; */
+            /* overflow: hidden; */
+            white-space: nowrap;
+            /* 将超出区域的文本隐藏 */
+            overflow: hidden;
+            /* 将无法显示的文本内容以省略号的形式显示 以上几个值缺一不可 */
+            text-overflow: ellipsis;
+
+        }
+        .box1{
+            font-size: 50px;
+            /* white-space用来设置空白区域 */
+            /* white-space属性1.normal默认值，2.norwap不换行 3.pre叫保留空白  4.*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        owadays, pets become so close and friendly to our human-beings that more and more people enj
+        oy keeping them. Pets can bring them a lot of joys and happiness, because playing with pets is
+        prevent their pets from hurting people and polluting our environment.
+    </div>
+
+    <div class="box1">今天天气真不错</div>
+</body>
+</html>
