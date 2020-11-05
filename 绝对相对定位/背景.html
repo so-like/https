@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100%;
+            height: 300px;
+            background-color: aquamarine;
+
+            background-image: url(./etc/02.jpg);
+            /* 让背景图片沿着x轴铺开 */
+            background-repeat: repeat-x;
+
+            /* 不沿着x或y平铺开 */
+            background-repeat: no-repeat;
+
+            /* 通过方位词来设置背景图片的位置 第二个值不写默认为center */
+            background-position:0 0;
+            padding: 10px;
+
+            border: red double 20px;
+
+            /* 背景只会出现在内容区 */
+            background-clip: content-box;
+            /* 边框区也会有背景 */
+            /* background-clip: border-box; */
+            /* 默认背景图片的原点在内容区的00处 */
+            background-origin: content-box;
+
+            /* background-size: 100% auto; */
+            /* 图片比例不变，在元素中铺满 */
+            background-size: cover;
+            /* 图片比例不变将图片在元素中完全显示 */
+            background-size: contain;
+
+            /* 固定定位 背景图不会跟着滚轮移动 属性值有scroll背景图片会跟着滚轮移动*/
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>

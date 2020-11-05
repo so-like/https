@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 200px;
+            border: 1px orange solid;
+            background-image: url(./etc/jb副本.png);
+            background-repeat: repeat-y;
+            /* 通过position属性将几个图片放到一个图片中，这样就会解决加载图片时闪烁问题  这种方式在网页中应用很多叫做css-sprite也叫雪碧图*/
+            /* 雪碧图可以提升用户体验，减少请求图片次数 加快访问速度 */
+            background-position: -100px 0;
+            /* background-size: cover; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            /* 通过渐变来设置一些复杂的背景图片渐变的实质是图片，表示线性渐变有红到黄 */
+            /* 注意线性简便的开头可以设置渐变的方向  默认是由上到下 也可以设置deg度数来控制渐变的方向*/
+            background-image: linear-gradient(to top left,red,yellow);
+            /* 颜色后面的数据表示从0-50像素开始由红色向其他颜色变化 */
+            background-image: linear-gradient(red 50px,yellow);
+
+        }
+        .box2{
+            width: 500px;
+            height: 300px;
+            /* 径向渐变 和上面得类似 就好像太阳一样向周围发射光芒*/
+            /* 渐变规则如果是正方形那么就是圆形如果是长方形那么就是椭圆形 */
+            /* at后表示径向渐变的圆点在00位置 */
+            background-image: radial-gradient(100px 100px at 0 0, red,yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+</body>
+</html>
