@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 显示生活中我们需要用一些表格来表示我么你的一些格式数据比如成绩单 或者课表 -->
+    <table border="1" width='50%'>
+        <!-- tr表示行有几个tr就表示有几行 -->
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <!-- 在纵向上合并单元格 -->
+            <td rowspan="2">C</td>
+            <td>D</td>
+           
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>D</td>
+            
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <!-- colspan将两个单元格合为一个 -->
+            <td colspan="2">C2</td>
+            
+        </tr>
+    </table>
+</body>
+</html>

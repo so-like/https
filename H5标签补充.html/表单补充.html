@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="处理页面.html">
+        <input type="text" name="username" value="姓名" disabled>
+
+        <!-- autocomplete自动开启填充功能 -->
+        <!-- readonly设置为只读属性 只读数据会提交 -->
+        <!-- disabled禁用 禁用数据不会提交-->
+        <!-- autofocus自动获取焦点 -->
+        <input type="text" name="user" autocomplete="off" readonly>
+        <input type="password" name="password" autofocus>
+        <input type="submit">
+
+        <br>
+        <br>
+        颜色选择框
+        <input type="color">
+
+        电子邮件
+        <input type="email">
+
+        电话号码
+        <input type="tel">
+        
+        <input type="reset">
+        <!-- 这个按钮点起来没什么作用，但我们可以通过设置js来让它发挥作用 -->
+        <input type="button" value="你好">
+    </form>
+</body>
+</html>

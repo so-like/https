@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            width: 50%;
+            margin: 50px auto;
+            border: black solid 1px;
+            /* border-spacing内部边框之间的距离 看似为0世纪上为2 */
+            border-spacing: 0px;
+
+            /* border-collapse表示边框可以合并 设置完border-collapse属性后就不可以再设置border-spacing了  */
+            border-collapse: collapse;
+
+        }
+        td{
+            border: black solid 1px;
+            height: 100px;
+            /* 默认情况下，td在元素中是垂直居中的我们可以通过vertical-algin来影响他 */
+            vertical-align: middle;
+            text-align: center;
+        }
+        /* 我们如果在创建表格时没有使用thead 或者tbody那么浏览器会将所有tr都放到一个tbody中，所以tr不是table的子元素 */
+        /* table的子元素为thead，tbody ，tfoot这些 */
+        tbody > tr:nth-child(2n+1){
+            background-color: coral;
+        }
+
+        tr:nth-child(2n){
+            /* 为偶数行加上背景颜色 */
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>住址</td>
+            </tr>
+            <tr>
+                <td>猪八戒</td>
+                <td>28</td>
+                <td>男</td>
+                <td>高老庄</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+            <tr>
+                <td>唐僧</td>
+                <td>18</td>
+                <td>男</td>
+                <td>水帘洞</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+            <tr>
+                <td>沙僧</td>
+                <td>38</td>
+                <td>男</td>
+                <td>流沙河</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

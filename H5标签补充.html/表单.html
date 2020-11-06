@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 声明一个表单 -->
+    <form action="处理页面.html">
+
+        <!-- 创建一个输入框 -->
+        文本框
+        <input type="text" name="username">
+
+        <!-- 创建一个密码输入框 -->
+        密码框
+        <input type="password" name="password">
+        <br>
+        <br>
+
+        <!-- 单选按钮 -->
+        单选按钮
+        <!-- radio必须要有相同的name名这样才可以达到二选一 -->
+        <!-- checked默认选择状态 -->
+        <input type="radio" name="sex" value="男" checked>
+        <input type="radio" name="sex" value="女">
+
+        <br>
+        <br>
+        <!-- 复选框按钮 -->
+        复选框
+        <input type="checkbox" name="1" value="lol">
+        <input type="checkbox" name="1" value="lpl">
+        <input type="checkbox" name="1" value="lck" checked>
+
+
+        <!-- 下拉列表 -->
+        <select name="bob" id="bob">
+            <option value="ok">选项一</option>
+            <!-- selected将该选项设置为默认选中 -->
+            <option selected value="no">选项二</option>
+            <option value="nom">选项三</option>
+        </select>
+
+        <!-- 提交按钮 -->
+        <input type="submit" value="百度">
+        <button>按钮</button>
+    </form>
+</body>
+</html>

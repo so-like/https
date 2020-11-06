@@ -1,0 +1,20 @@
+/* 公共样式 */
+.clear-fix::before,
+.clear-fix::after{
+    /* 解决高度塌陷 */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    /* 给body设置最小宽度防止body一直缩小 */
+    min-width: 1226px;
+}
+/* 定义一个宽度为1226的 */
+.w{
+    width: 1226px;
+    margin: 0 auto;
+}
