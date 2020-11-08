@@ -206,6 +206,7 @@
   /* border-top: 1px solid #E0E0E0;
   box-shadow: 0 5px 5px rgb(0, 0, 0,0.3); */
   transition: height 0.3s;
+  z-index: 9999;
 }
 /* 当鼠标移入li元素或者当鼠标移到goods_info上时 弹出层不消失 */
 /* 让第一个隐藏了的元素和第九个第十个元素鼠标悬停时没反应 */
@@ -226,4 +227,31 @@
 .header{
   height: 100px;
   /* background-color: yellowgreen; */
+}
+
+/* 设置搜索栏 */
+.search_warper{
+  width: 296px;
+  height: 50px;
+  /* background-color: red; */
+  float: right;
+  margin-top: 25px;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+/* 搜索框和搜索按钮之间有个缝隙让它们浮动之后这个缝隙就解决了 */
+.search_warper .search_inp{
+  width: 204px;
+  border: none;
+  padding: 0 20px;
+  float: left;
+  height: 50px;
+}
+.search_warper .search_btn{
+  float: left;
+  width: 52px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
 }
