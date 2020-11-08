@@ -42,12 +42,12 @@
                 <li class="line">|</li>
                 <li><a href="javasrcipt:;">协议规则</a></li>
                 <li class="line">|</li>
-                <li ><a class="app" href="javasrcipt:;">下载app
-                    <div class="qrcode">
-                        <img src="./etc/app.png" >
-                        <span>小米商城app</span>
-                    </div>
-                </a></li>
+                <li><a class="app" href="javasrcipt:;">下载app
+                        <div class="qrcode">
+                            <img src="./etc/app.png">
+                            <span>小米商城app</span>
+                        </div>
+                    </a></li>
                 <li class="line">|</li>
                 <li><a href="javasrcipt:;">智能生活</a></li>
                 <li class="line">|</li>
@@ -69,8 +69,46 @@
                 <li><a href="javasrcipt:;">消息通知</a></li>
             </ul>
 
-            
+
         </div>
+
+    </div>
+
+    <!-- 定义头部导航栏 -->
+    <div class="header_warper">
+        <div class="header w">
+            <h1 class="logo">
+                <!-- 小米官网这几个字给浏览器看得 -->
+                小米官网
+                <!-- title为元素设置一个title这样当鼠标移到logo上时显示字幕 -->
+                <a class="mi" href="#" title="小米"></a>
+                <a class="home" href="#" title="主页"></a>
+            </h1>
+            <!-- 创建一个中间导航条容器 -->
+            <div class="nav_warper">
+                <!-- 为了避免高度塌陷加一个clearfix -->
+                <ul class="nav clearfix">
+                    <!-- 给需要弹出框的元素设置一个show_goods类用来设置鼠标悬停功能 -->
+                    <li><a class="all_goods" href="#">全部商品分类</a></li>
+                    <li class="show_goods"><a href="#">小米手机</a></li>
+                    <li class="show_goods"><a href="#">Reami 红米</a></li>
+                    <li class="show_goods"><a href="#">电视</a></li>
+                    <li class="show_goods"><a href="#">笔记本</a></li>
+                    <li class="show_goods"><a href="#">家电</a></li>
+                    <li class="show_goods"><a href="#">路由器</a></li>
+                    <li class="show_goods"><a href="#">智能硬件</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#">社区</a></li>
+
+                    <!-- 设置弹出层 -->
+                    <div class="goods_info">
+
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+
 
     </div>
 </body>

@@ -62,54 +62,168 @@
   color: #ff6700;
 }
 .app .qrcode {
-  display: none;
+  /* display: none; */
   width: 124px;
-  height: 148px;
+  height: 0;
+  overflow: hidden;
   /* 小米商城这几个字继承了父元素的lineheight40像素这里将它重置 */
   line-height: 1;
   background-color: #ffffff;
   text-align: center;
-    /* 设置阴影部分 */
-  box-shadow: 0 0 10px rgb(0,0,0,0.3);
+  /* 设置阴影部分 */
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   /* 给二维码框也开启绝对定位这样让它脱离文档流就不会让下拉小三角溢出 */
   position: absolute;
   left: -35px;
   top: 40px;
   margin: auto;
+  /* 当元素高度发生变化时 要花一秒的时间 */
+  transition: height 1s;
 }
-.app:hover .qrcode{
+.app:hover .qrcode,
+.app:hover::after{
   /* 给二维码设置隐藏当鼠标移入的时候展开 */
+  /* 还有一种办法就是通过，li:hover .app::after让鼠标移到li元素上时after元素显示出来 */
+/* 在qrcode元素上通过将它的高度设置为0将其隐藏 */
   display: block;
+  height: 148px;
 }
 
-.app .qrcode img{
-    width: 90px;
-    height: 90px;
-    margin: 17px 17px;
+.app .qrcode img {
+  width: 90px;
+  height: 90px;
+  margin: 17px 17px;
 }
 /* 设置小米商城app字体大小 */
-.app .qrcode span{
-    color: black;
-    font-size: 16px;
+.app .qrcode span {
+  color: black;
+  font-size: 16px;
 }
 /* 开启父元素的相对定位 */
-.app{
-    position: relative;
+.app {
+  position: relative;
 }
 /* 设置app下拉小三角 */
 /* 当li hover时才给.app设置伪例元素 */
-li:hover .app::after{
-    content: "";
-    position: absolute;
-    /* 去掉小三角的默认继承自父元素的lineheight、 */
-    width: 0;
-    height: 0;
-    border: transparent solid 8px;
-    border-bottom-color: #ffffff;
-    border-top: none;
-    /* 给小三角设置定位 */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.app::after {
+  content: "";
+  display: none;
+  position: absolute;
+  /* 去掉小三角的默认继承自父元素的lineheight、 */
+  width: 0;
+  height: 0;
+  border: transparent solid 8px;
+  border-bottom-color: #ffffff;
+  border-top: none;
+  /* 给小三角设置定位 */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+/* 头部部分 */
+.header{
+  height: 100px;
+}
+.header .logo{
+  float: left;
+  width: 55px;
+  height: 55px;
+  margin-top: 22.5px;
+  position: relative;
+  overflow: hidden;
+  /* 设置文字首行缩进，如果是负的那么就是出了浏览器了  */
+  text-indent: -999999px;
+}
+.logo a{
+  width: 55px;
+  height: 55px;
+  left: 0;
+  position: absolute;
+  background-color: #ff6700;
+  background-image: url(../etc/mi-logo.png);
+  background-position: center;
+  transition:left .5s;
+  
+}
+.logo .home{
+  background-image: url(../etc/mi-home.png);
+  left: -55px;
+  
+}
+/* 为两个背景元素mi和home设置动画效果 鼠标移入时mi向右移动一个logo单位 而home向左移动一个logo的距离 */
+.logo:hover .mi{
+  left: 55px;
+}
+.logo:hover .home{
+  left: 0;
+}
+
+/* 设置导航条样式 */
+.header .nav_warper{
+  float: left;
+  line-height: 100px;
+  margin-left: 7px;
+}
+/* 让li元素左浮动 */
+.nav_warper li{
+  float: left;
+}
+/* 给导航元素设置背景颜色 */
+.header .nav{
+  width: 792px;
+  height: 100px;
+  padding-left: 58px;
+}
+/* 将全部商品栏隐藏 而不占用容器位置*/
+.header .nav .all_goods{
+  visibility: hidden;
+}
+.nav_warper li a{
+  font-size: 16px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.nav_warper li a:hover{
+  color: #FF6700;
+}
+
+/* 全部商品弹出层 */
+.nav .goods_info{
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  /* background-color: brown; */
+  /* 这里的相对定位时相对于header——warper */
+  position: absolute;
+  top: 100px;
+  left: 0;
+  /* 隐藏时候先不设置 */
+  /* border-top: 1px solid #E0E0E0;
+  box-shadow: 0 5px 5px rgb(0, 0, 0,0.3); */
+  transition: height 0.3s;
+}
+/* 当鼠标移入li元素或者当鼠标移到goods_info上时 弹出层不消失 */
+/* 让第一个隐藏了的元素和第九个第十个元素鼠标悬停时没反应 */
+/* .nav li:not(:first-of-type):not(:nth-child(9)):not(:nth-child(10)):hover ~ .goods_info, */
+/* 上面的方法太费劲不推荐使用 */
+.nav .show_goods:hover ~ .goods_info,
+.goods_info:hover{
+  height: 288px;
+  border-top: 1px solid #E0E0E0;
+  /* 给边框设置阴影部分 */
+  box-shadow: 0 5px 5px rgb(0, 0, 0,0.3);
+}
+.header_warper{
+  /* background-color: red; */
+  position: relative;
+  
+}
+.header{
+  height: 100px;
+  /* background-color: yellowgreen; */
 }
