@@ -61,6 +61,7 @@
 .cart:hover i {
   color: #ff6700;
 }
+/* 弹出二维码 */
 .app .qrcode {
   /* display: none; */
   width: 124px;
@@ -79,6 +80,7 @@
   margin: auto;
   /* 当元素高度发生变化时 要花一秒的时间 */
   transition: height 1s;
+  z-index: 99999;
 }
 .app:hover .qrcode,
 .app:hover::after{
@@ -167,9 +169,58 @@
   line-height: 100px;
   margin-left: 7px;
 }
+.all_good{
+  position: relative;
+  /* background-color: red; */
+}
 /* 让li元素左浮动 */
-.nav_warper li{
+/* 只让其子元素浮动 后代元素就别浮动了 */
+.nav > li{
   float: left;
+}
+/* 菜单栏 让它的层级小于弹出层的层级 */
+/* 让它相对于父元素来定位 父元素开启相对定位 */
+.all_goods_left{
+  width: 234px;
+  height: 420px;
+  background-color: rgb(0, 0, 0,0.6);
+  position: absolute;
+  z-index: 999;
+  left: -120px;
+  line-height: 1;
+  padding: 20px 0;
+}
+.all_goods_left li{
+  padding-left: 30px;
+}
+/* 设置左侧导航栏的a的样式 */
+/* 前面一定要冠上.nav——warper 否则就会被后面的样式覆盖掉 */
+.nav_warper .all_goods_left a{
+  color: white;
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+}
+
+/* 给导航栏a标签后边的箭头设置样式 */
+.all_goods_left a i{
+  float: right;
+  line-height: 42px;
+}
+
+/* 给弹出手机层设置样式 */
+.all_goods_left .phone{
+  width: 994px;
+  height: 100%;
+  top: 0;
+  left: 234px;
+  display: none;
+  position: absolute;
+  background-color: #D5E1E1;
+}
+.all_goods_left li:hover ~ .phone{
+  display: block;
 }
 /* 给导航元素设置背景颜色 */
 .header .nav{
@@ -191,6 +242,8 @@
 .nav_warper li a:hover{
   color: #FF6700;
 }
+
+
 
 /* 全部商品弹出层 */
 .nav .goods_info{
@@ -236,22 +289,114 @@
   /* background-color: red; */
   float: right;
   margin-top: 25px;
-  border: 1px solid rgb(224, 224, 224);
+  
 }
 
 /* 搜索框和搜索按钮之间有个缝隙让它们浮动之后这个缝隙就解决了 */
 .search_warper .search_inp{
-  width: 204px;
+  box-sizing: border-box;
+  width: 244px;
   border: none;
-  padding: 0 20px;
+  padding: 0 10px;
   float: left;
+  font-size: 16px;
   height: 50px;
+  border: 1px solid rgb(224, 224, 224);
+  /* 去除默认的轮廓线 */
+  outline: none;
 }
+/* 设置旁边放大镜按钮样式 */
 .search_warper .search_btn{
   float: left;
   width: 52px;
   height: 50px;
-  padding: 0;
+  box-sizing: border-box;
+  padding-left: 0;
   border: 0;
   font-size: 16px;
+  color: #616161;
+  border: 1px solid rgb(224, 224, 224);
+  /* 去除左边边框重叠到一起 */
+  border-left: none;
+}
+/* 鼠标获取焦点时输入框有个橙色的边框 */
+.search_warper .search_inp:focus{
+  border: 1px solid #FF6700;
+}
+/* 通过设置兄弟元素的样式来给它设置边框 */
+.search_warper .search_inp:focus + .search_btn{
+  border: 1px solid #FF6700;
+  border-left: none;
+}
+/* 设置鼠标悬停放大镜后背景发生改变 */
+.search_warper .search_btn:hover{
+  background-color: #FF6700;
+}
+
+
+/* 设置轮播图的样式 */
+.banner{
+  position: relative;
+  height: 460px;
+}
+/* img标签的宽度是参照它的父元素li来设置的 当li脱离了文档流之后就失效了 */
+.banner .img_list li{
+  position: absolute;
+}
+.banner img{
+  width: 100%;
+  /* 去掉图片之间的轮廓线 */
+  vertical-align: top;
+}
+
+/* 设置右下角小圆点 */
+.point{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin:30px 40px;
+}
+/* 设置下面轮播点的样式 */
+.point a{
+  float: left;
+  width: 6px;
+  height: 6px;
+  border: 2px solid rgb(255, 255, 255,0.4);
+  background-color: rgb(0, 0, 0，.6);
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.point a:hover,
+.point a.active{
+  background-color: rgb(255, 255, 255,0.4);
+  border:rgb(0, 0, 0，.6);
+}
+
+.pres a{
+  background-image: url(../etc/l5.png);
+  position: absolute;
+  width: 41px;
+  height: 69px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.pres .pre{
+  left: 234px;
+  background-position: -84px 0;
+}
+.pres .next{
+  /* 将右侧的图标放到最右边 */
+  right: 0;
+  background-position: -125px 0;
+}
+
+/* 设置鼠标悬停时左右互动图标的状态 */
+.pres .pre:hover{
+  background-position: 0 0;
+}
+.pres .next:hover{
+  background-position: -42px 0;
 }

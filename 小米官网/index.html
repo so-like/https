@@ -90,7 +90,67 @@
                 <!-- 为了避免高度塌陷加一个clearfix -->
                 <ul class="nav clearfix">
                     <!-- 给需要弹出框的元素设置一个show_goods类用来设置鼠标悬停功能 -->
-                    <li><a class="all_goods" href="#">全部商品分类</a></li>
+                    <li class="all_good">
+                        <a class="all_goods" href="#">全部商品分类</a>
+                        <!-- 设置左侧导航栏 -->
+                        <ul class="all_goods_left">
+                            <li>
+                                <a href="#">手机 电话卡
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="#">电视 盒子
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">笔记本 显示器
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="#">出行 穿戴
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                              
+                            </li>
+                            <li>
+                                <a href="#">智能 路由器
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                             
+                            </li>
+                            <li>
+                                <a href="#">电源 配件
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                              
+                            </li>
+                            <li>
+                                <a href="#">健康 儿童
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="#">耳机 音响
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">健康 儿童
+                                    <i class="fa fa-angle-right"></i>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="#">耳机 音响
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <div class="phone">
+
+                            </div>
+
+                        </ul>
+                    </li>
                     <li class="show_goods"><a href="#">小米手机</a></li>
                     <li class="show_goods"><a href="#">Reami 红米</a></li>
                     <li class="show_goods"><a href="#">电视</a></li>
@@ -122,6 +182,52 @@
 
 
     </div>
+
+    <!-- 定义轮播图banner容器 -->
+    <div class="banner_warper">
+        <div class="banner w">
+            <ul class="img_list">
+                <li>
+                    <a href="#">
+                        <img src="./etc/l1.webp">
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="#">
+                        <img src="./etc/l2.webp">
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="#">
+                        <img src="./etc/l3.jpg">
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="#">
+                        <img src="./etc/l4.webp">
+                    </a>
+                </li>   
+            </ul>
+            <!-- 设置左右滑动按钮 -->
+            <div class="pres">
+                <a class="pre" href="#"></a>
+                <a class="next" href="#"></a>
+            </div>
+    
+            <!-- 轮播图下的小点 -->
+            <div class="point">
+                <a class="active" href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+      
+    </div>
+
 </body>
 
 </html>
