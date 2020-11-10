@@ -591,3 +591,70 @@
   display: block;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+.ad{
+  height: 170px;
+  background-color: #FFFFFF;
+  margin-top: 14px;
+}
+.short{
+  width: 234px;
+  height:170px;
+  background-color: #5F5750;
+  float: left;
+}
+/* 设置a的样式 */
+.short a{
+  /* 去除下划线 */
+  text-decoration: none;
+  color: #B5B2AE;
+  display: block;
+  width: 76px;
+  height: 84px;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  /* border: 1px solid #665E57; */
+  overflow: hidden;
+}
+/* 设置图标的样式 */
+.short i{
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  /* text-align: center; */
+}
+.short a:hover{
+  color: #FFFFFF;
+}
+/* 给li开启一个相对定位 */
+.ad .short li{
+  position: relative;
+}
+/* 设置左侧快捷方式的内边框 */
+/* .ad .short a::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 1px;
+  background-color: red;
+  left: 0;
+  right: 0;
+  height: 0;
+  margin: 0 auto;
+} */
+
+.ad_img li{
+  display: block;
+  width: 316px;
+  float: right;
+  margin-left: 15px;
+}
+/* 第一张图片和short之间有个间隔 */
+.ad_img li:first-child{
+  margin-left: 14px;
+}
+.ad_img img{
+  width: 316px;
+}
