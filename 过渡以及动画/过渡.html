@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 800px;
+            height: 600px;
+            background-color: #bfa;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        .box:hover .box2{
+            width: 300px;
+            height: 300px;
+            transition: height 2s;
+            transition: all 3s;
+            background-color: yellow;
+        }
+        /* transition为过渡效果他有四个属性 */
+        /* transition-property 表示要过渡的属性*/
+        /* transition-duration 表示要过渡的时间 颜色也是可以过渡的*/
+        /* 可实现过渡的只要是有效数值就可以 可以给属性分别制定时间 */
+        /* transition-timing-function 属性值有ease (先快后慢) liner(匀速运动) ease-in(加速运动) ease-out(减速运动)
+        表示过渡时序函数 可以规定过渡发生的时序  还可以通过贝塞尔曲线来设置过渡效果  steps(3)将过渡效果分为几个部分*/
+        /* transition-delay 过渡延迟 等待一个时间数再执行过渡动画*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+</html>
