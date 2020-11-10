@@ -400,3 +400,194 @@
 .pres .next:hover{
   background-position: -42px 0;
 }
+
+
+/* 设置返回顶部条 样式*/
+.back_top{
+  width: 26px;
+  height: 206px;
+  background-color: #FFFFFF;
+  /* 给返回开启固定定位 */
+  position: fixed;
+  bottom: 70px;
+  right: 50%;
+
+  /* left+margin-left+ width + margin-right +right = 视窗口宽度 */
+    /* auto + 0 + 26 +0 + right = auto left和right都不能写死 */
+    /* 因为margin-left和left在同一侧他们会相互补充所以不能设置margin-left，只能设置margin-right */
+  margin-right: -639px;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* 定义右侧返回栏 */
+.back li{
+  margin:17px 5px;
+}
+.back a{
+  color: #9E9E9E;
+}
+.back a:hover{
+  color: #FF6700;
+}
+.back .a1:hover ~ .back_tan{
+  display: block;
+}
+.back .a2:hover ~ .back_tan2{
+  display: block;
+}
+.back .a3:hover ~ .back_tan3{
+  display: block;
+}
+.back .a4:hover ~ .back_tan4{
+  display: block;
+}
+.back .a5:hover ~ .back_tan5{
+  display: block;
+}
+.back li:first-child{
+  margin-left: 6px;
+}
+
+.back_tan{
+  display: none;
+  width: 80px;
+  height: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 32px;
+  top: 13px;
+  line-height: 30px;
+  text-align: center;
+}
+.back_tan2{
+  display: none;
+  width: 80px;
+  height: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 32px;
+  top: 50px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.back_tan3{
+  display: none;
+  width: 80px;
+  height: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 32px;
+  top: 87px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.back_tan4{
+  display: none;
+  width: 80px;
+  height: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 32px;
+  top: 124px;
+  line-height: 30px;
+  text-align: center;
+}
+
+
+.back_tan5{
+  display: none;
+  width: 80px;
+  height: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 32px;
+  top: 161px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.a1::after{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: transparent solid 6px;
+  border-left-color: #ffffff;
+  border-right: none;
+  right: 26px;
+  top: 21px;
+
+}
+.a2::after{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: transparent solid 6px;
+  border-left-color: #ffffff;
+  border-right: none;
+  right: 26px;
+  top: 58px;
+}
+.a3::after{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: transparent solid 6px;
+  border-left-color: #ffffff;
+  border-right: none;
+  right: 26px;
+  top: 95px;
+}
+.a4::after{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: transparent solid 6px;
+  border-left-color: #ffffff;
+  border-right: none;
+  right: 26px;
+  top: 132px;
+
+}
+.a5::after{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: transparent solid 6px;
+  border-left-color: #ffffff;
+  border-right: none;
+  right: 26px;
+  top: 169px;
+
+}
+.a1:hover::after{
+  display: block;
+}
+.a2:hover::after{
+  display: block;
+}
+.a3:hover::after{
+  display: block;
+}
+.a4:hover::after{
+  display: block;
+}
+.a5:hover::after{
+  display: block;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
