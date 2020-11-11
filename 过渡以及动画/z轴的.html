@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* 设置视距 也就是我们的眼镜和屏幕之间的距离 */
+            perspective: 800px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 200px auto;
+        }
+        .box:hover{
+            /* z轴视距 近大远小 */
+            transform: translateZ(-800px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

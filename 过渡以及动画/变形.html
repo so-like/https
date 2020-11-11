@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 0 auto;
+            margin-top: 200px;
+            /* 向x轴正方向平移100px */
+            /* 变形不会脱离文档流 也不会影响页面布局 */
+            transform: translate(100px,-100px);
+        }
+        .box2{
+            background-color: chocolate;
+            margin: 0 auto;
+            position: absolute;
+            /* 让一个行内元素居中 */
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .box3{
+            background-color: coral;
+            width: 100px;
+            height: 100px;
+            transition: all 0.5;
+        }
+        .box3:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 0 10px rgb(0, 0, 0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box2">
+        aaaaa
+    </div>
+
+    <div class="box3">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 91px;
+            height: 91px;
+            background-color: beige;
+            margin: 200px auto;
+            background-image: url(./etc/奔跑的少年.jpg);
+            animation-name: test;
+            animation-duration: 1s;
+            animation-timing-function: steps(6);
+            animation-iteration-count: infinite;
+        }
+
+        /* 创建一个关键帧 */
+        @keyframes test{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -551px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
