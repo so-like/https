@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
-            /* 设置视距 也就是我们的眼镜和屏幕之间的距离 */
-            perspective: 800px;
+        *{
+            margin: 0;
+            padding: 0
         }
         .box{
             width: 200px;
             height: 200px;
             background-color: #bfa;
             margin: 200px auto;
-            transition: 2s;
         }
         .box:hover{
-            /* 绕z轴旋转360度 */
-            transform:rotateZ(360deg);
-            backface-visibility: hidden;
+            transform: scaleX(2);
         }
     </style>
 </head>

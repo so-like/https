@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        .box{
+            width: 246px;
+            height: 246px;
+            /* background-color: #bfa; */
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateZ(45deg) rotateX(45deg);
+            animation: test 5s infinite linear;
+        }
+        .box > div{
+            width: 246px;
+            height: 246px;
+            opacity: 0.6;
+            position: absolute;
+        }
+        .box1{
+            transform: rotateY(90deg) translateZ(123px);
+        }
+        .box2{
+            transform: rotateY(-90deg) translateZ(123px);
+        }
+        .box3{
+            transform: rotateX(90deg) translateZ(123px);
+        }
+        .box4{
+            transform: rotateX(-90deg) translateZ(123px);
+        }
+        .box5{
+            transform: rotateY(0deg) translateZ(123px);
+        }
+        .box6{
+            transform: rotateY(180deg) translateZ(123px);
+        }
+
+        @keyframes test{
+            from{
+                transform: rotateX(0) rotateZ(0);
+            }
+            to{
+                transform: rotateX(360deg) rotateZ(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <img src="./etc/zf.jpg">
+        </div>
+        <div class="box2">
+            <img src="./etc/zf.jpg">
+        </div>
+        <div class="box3">
+            <img src="./etc/zf.jpg">
+        </div>
+
+        <div class="box4">
+            <img src="./etc/zf.jpg">
+        </div>
+        <div class="box5">
+            <img src="./etc/zf.jpg">
+        </div>
+        <div class="box6">
+            <img src="./etc/zf.jpg">
+        </div>
+    </div>
+</body>
+</html>

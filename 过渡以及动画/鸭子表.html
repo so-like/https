@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            width: 400px;
+            height: 400px;
+            background-color: transparent;
+            border: 10px solid black;
+            border-radius: 50%;
+            margin: 200px auto;
+            position: relative;
+        }
+        .clock >div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        /* 定义秒针 */
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: transparent;
+            animation: run 60s infinite linear;
+        }
+        .sec{
+            width: 5px;
+            height: 200px;
+            background-color: lightcoral;
+            margin: 0 auto;
+        }
+        @keyframes run{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        /* 定义分针 */
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: transparent;
+            animation: run1 3600s infinite linear;
+        }
+        .min{
+            width: 8px;
+            height: 150px;
+            background-color: turquoise;
+            margin:0 auto;
+        }
+        @keyframes run1{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        /* 定义时针 */
+
+        /* 定义时针 */
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            animation: run2 216000s infinite linear;
+        }
+        .hou{
+            width: 10px;
+            height: 100px;
+            background-color: orange;
+            margin: 0 auto;
+        }@keyframes run2{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="box">
+            <div class="sec">
+
+            </div>
+        </div>
+
+        <div class="box1">
+            <div class="min">
+
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="hou">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
